@@ -1,0 +1,15 @@
+#contributor : Satoshi Nishimura <nishim314@gmail.com>
+#name : pri ...(...)
+#group : definitions
+# --
+/**
+ * ${1:name}
+ * ${2:$args}
+ * ${3:description}
+ * ${4:return}
+ * @author: yujie6
+ */
+private function $1($2)
+{
+   $0
+}
