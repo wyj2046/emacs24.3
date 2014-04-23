@@ -27,9 +27,14 @@
   (list "~/code/redis/src")
   )
 
+(defconst mapdb-include-dirs
+  (list "~/project/test_mapdb")
+  )
+
 (require 'semantic-c nil 'noerror)
 (let ((include-dirs  cedet-user-include-dirs))
   (setq include-dirs (append include-dirs redis-include-dirs))  ;; 增加项目路径
+  (setq include-dirs (append include-dirs mapdb-include-dirs))
   (mapc (lambda (dir)
           (semantic-add-system-include dir 'c++-mode)
           (semantic-add-system-include dir 'c-mode))
