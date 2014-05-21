@@ -1,0 +1,57 @@
+# -*- mode: snippet -*-
+# name: script_template
+# key: template
+# --
+#! /usr/bin/env bash
+#
+# bash scirpt template
+
+set -o nounset
+set -o errexit
+
+# Constants and Environment Variable Names
+
+
+# Function
+function help() {
+    cat <<HELP
+USAGE: 
+OPTIONS: 
+EXAMPLE: 
+HELP
+    exit 0
+}
+
+function log() {
+    local prefix="[\$(date +%Y-%m-%d\ %H:%M:%S)] \$0:"
+    echo "\${prefix} \$@" >&1
+}
+# log "INFO" "a message"
+
+function error() {
+    log "ERROR" "\$1"
+    exit 1
+}
+
+
+# The main program
+case "\$1" in
+    "help" )
+	help
+	;;
+    "start" )
+	echo "Your Input Command: start"
+	;;
+    "stop" )
+	echo "Your Input Command: stop"
+	;;
+    "restart" )
+	echo "Your Input Command: restart"
+	;;
+    * )
+	# echo "\$0 {start | stop | restart}"
+	error "\$0 {start | stop | restart}"
+	;;
+esac
+
+exit 0
