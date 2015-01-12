@@ -211,3 +211,9 @@ the mode-line."
   (goto-char (point-min))
   (cflow-mode)
   )
+
+
+;; google-c-style
+(add-to-list 'load-path "~/.emacs.d/plugins")
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)

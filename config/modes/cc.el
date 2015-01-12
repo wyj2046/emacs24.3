@@ -8,6 +8,6 @@
   (local-set-key (kbd "<S-return>") 'newline)
   )
 
-(add-hook 'c-mode-hook 'wyj/cc-mode:basic-setup)
-(add-hook 'c++-mode-hook 'wyj/cc-mode:basic-setup)
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+;; (add-hook 'c-mode-hook 'wyj/cc-mode:basic-setup)
+;; (add-hook 'c++-mode-hook 'wyj/cc-mode:basic-setup)
+;; (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
